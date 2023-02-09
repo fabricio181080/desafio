@@ -8,6 +8,7 @@ import java.io.IOException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -30,6 +31,10 @@ public class AwardControllerIntegrationTests {
 	@LocalServerPort
 	private int port;
 	
+	@Value("${resultado.path}")
+	private String resultadoPath;
+
+	
 	private String getRootUrl() {
 		return "http://localhost:" + port + "/api/v1";
 	}
@@ -50,7 +55,7 @@ public class AwardControllerIntegrationTests {
 
 		ObjectMapper mapper = new ObjectMapper();
 		
-		assertEquals(mapper.readTree(new File("./src/test/resources/resultado.json")), mapper.readTree(response.getBody()));
+		assertEquals(mapper.readTree(new File(resultadoPath)), mapper.readTree(response.getBody()));
 	}
 
 }

@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -33,10 +34,13 @@ public class AwardService {
 
 	@Autowired
 	private ProducerRepository producerRepository;
+	
+	@Value("${importacao.path}")
+	private String importacaotPath;
 
 	@Transactional
 	public void init() throws IOException {
-		FileReader in = new FileReader(new File("src/main/resources/movielist.csv"));
+		FileReader in = new FileReader(new File(importacaotPath));
 		try (BufferedReader br = new BufferedReader(in)) {
 			String line;
 			line = br.readLine();
