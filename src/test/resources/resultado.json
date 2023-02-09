@@ -1,1 +1,20 @@
-{"min":[{"producer":"Adam Sandler","previousWin":2011,"followingWin":2012,"interval":1},{"producer":"Elie Samaha","previousWin":2000,"followingWin":2001,"interval":1},{"producer":"Jack Giarraputo","previousWin":2011,"followingWin":2012,"interval":1},{"producer":"Joel Silver","previousWin":1990,"followingWin":1991,"interval":1}],"max":[{"producer":"Joel Silver","previousWin":1991,"followingWin":2005,"interval":14}]}
+{
+"min": [
+{
+"interval": 1,
+"producer": "Joel Silver",
+"previousWin": 1990,
+"followingWin": 1991,
+"movie": "The Adventures of Ford Fairlane"
+}
+],
+"max": [
+{
+"interval": 13,
+"producer": "Matthew Vaughn",
+"previousWin": 2002,
+"followingWin": 2015,
+"movie": "Swept Away"
+}
+]
+}
