@@ -4,8 +4,7 @@
 "interval": 1,
 "producer": "Joel Silver",
 "previousWin": 1990,
-"followingWin": 1991,
-"movie": "The Adventures of Ford Fairlane"
+"followingWin": 1991
 }
 ],
 "max": [
@@ -13,8 +12,7 @@
 "interval": 13,
 "producer": "Matthew Vaughn",
 "previousWin": 2002,
-"followingWin": 2015,
-"movie": "Swept Away"
+"followingWin": 2015
 }
 ]
 }

@@ -20,8 +20,4 @@ public interface Interval {
 	@Value("#{target.interval}")
 	public Integer getInterval();
 	
-	@Value("#{target.movie}")
-	public String getMovie();
-
-
 }
